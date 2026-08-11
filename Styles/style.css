@@ -9,7 +9,9 @@
     color: #333;
     margin-bottom: 20px;
 }
-
+#myPhoto{
+   size:30%;
+}
 img {
     max-width: 100%;
     height: auto;
