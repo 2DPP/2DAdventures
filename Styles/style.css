@@ -21,6 +21,7 @@ body {
 #myName{
     margin-top: 20px;
 }
+
 #GuideName {
     font-size: 30px;
     font-weight: bold;
@@ -28,9 +29,12 @@ body {
     margin-bottom: 20px;
     font-family: 'Sekuya', sans-serif;
 }
-    #bio{
+
+
+#bio{
     padding:10px;
-    }
+}
+
 #myPhoto{
    width: 250px;
    height: auto;
@@ -40,6 +44,7 @@ body {
    box-shadow: 0 0 25px rgba(0, 0, 0, 0.644);
    transition: transform 0.3s ease;
 }
+
 #myPhoto:hover{
    transform: scale(1.1);
 }
