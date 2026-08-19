@@ -11,13 +11,23 @@ body {
     flex-direction: column;
     background-color: #c0a193e5;
 }
-.container {
+header {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
     border: 2px solid #333;
     background-color: #ddb3b3;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+}
+nav a {
+    color: #333;
+    font-weight: bold;
 }
 #myName{
     margin-top: 20px;
@@ -55,6 +65,9 @@ section{
     display: flex;
     flex-direction: column;
 }
+main {
+    width: 100%;
+}
 #bio {
     font-size: 18px;
     color: #3f3f3f;
@@ -83,4 +96,13 @@ article {
 #recommendation{
     margin-bottom: 20px;
     margin-top: 20px;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    background-color: #ddb3b3;
 }
