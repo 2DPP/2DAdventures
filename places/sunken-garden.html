@@ -34,6 +34,60 @@
             <tr><th scope="row">Price range</th><td>Free admission</td></tr>
             <tr><th scope="row">Best time to visit</th><td>Late afternoon or early evening</td></tr>
         </table>
+        
+        <section class="suggestion-section" aria-labelledby="suggestion-title">
+            <h2 id="suggestion-title">Suggest a place</h2>
+            <p>Know somewhere worth adding to the guide? Tell me about it.</p>
+            <form class="suggestion-form" action="#" method="post">
+                <div class="form-field">
+                    <label for="place-name">Place name</label>
+                    <input type="text" id="place-name" name="place-name" required>
+                </div>
+
+                <fieldset>
+                    <legend>What kind of place is it?</legend>
+                    <div class="choice-list">
+                        <label for="category-food">
+                            <input type="radio" id="category-food" name="category" value="food" required>
+                            Food spot
+                        </label>
+                        <label for="category-study">
+                            <input type="radio" id="category-study" name="category" value="study-spot">
+                            Study spot
+                        </label>
+                        <label for="category-outdoors">
+                            <input type="radio" id="category-outdoors" name="category" value="outdoors">
+                            Outdoors
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What's good about it?</legend>
+                    <div class="choice-list">
+                        <label for="good-affordable">
+                            <input type="checkbox" id="good-affordable" name="good-points" value="affordable">
+                            Affordable
+                        </label>
+                        <label for="good-wifi">
+                            <input type="checkbox" id="good-wifi" name="good-points" value="good-wifi">
+                            Good Wi-Fi
+                        </label>
+                        <label for="good-quiet">
+                            <input type="checkbox" id="good-quiet" name="good-points" value="quiet">
+                            Quiet
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="contact-email">Contact email</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+                </div>
+
+                <button type="submit">Send suggestion</button>
+            </form>
+        </section>
     </article>
 </main>
 <footer><p>© 2026 2DVentures. All rights reserved.</p></footer>
