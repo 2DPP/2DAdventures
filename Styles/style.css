@@ -1,0 +1,124 @@
+* {
+    margin:0;
+    padding:0;
+   box-sizing:border-box;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #c0a193e5;
+}
+header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    background-color: #ddb3b3;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+}
+nav a {
+    color: #333;
+    font-weight: bold;
+}
+#myName{
+    margin-top: 20px;
+}
+
+#GuideName {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Sekuya', sans-serif;
+}
+
+
+#bio{
+    padding:10px;
+}
+
+
+section{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    width: 100%;
+}
+#bio {
+    font-size: 18px;
+    color: #3f3f3f;
+    margin-bottom: 20px;
+    margin:auto;
+}
+.place-image {
+    max-width: 100%;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px 10px rgba(0, 0, 0, 0.1);
+}
+article {
+    width: min(70%, 800px);
+    min-height: 100%;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.place-summary {
+    min-height: 160px;
+}
+.place-details {
+    text-align: left;
+}
+.place-details h1 {
+    text-align: center;
+}
+.place-details p {
+    line-height: 1.7;
+    margin: 16px 0;
+}
+table {
+    width: 100%;
+    margin-top: 28px;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+th,
+td {
+    padding: 12px;
+    border: 1px solid #333;
+    vertical-align: top;
+}
+th {
+    width: 35%;
+}
+#recommendation{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    background-color: #ddb3b3;
+}

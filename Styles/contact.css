@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #c0a193e5;
+	color: #333;
+	font-family: 'Playfair Display', serif;
+}
+header {
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	border: 2px solid #333;
+	background-color: #ddb3b3;
+}
+#GuideName {
+	margin-bottom: 20px;
+	font-family: 'Sekuya', sans-serif;
+	font-size: 30px;
+}
+nav ul {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	list-style: none;
+}
+nav a {
+	color: #333;
+	font-weight: bold;
+}
+main {
+	width: min(700px, calc(100% - 40px));
+	flex: 1;
+	padding: 60px 0 72px;
+	line-height: 1.6;
+}
+main h2 {
+	margin-bottom: 16px;
+}
+form {
+	margin: 32px 0;
+	padding: 28px;
+	border: 2px solid #333;
+	background-color: rgba(255, 255, 255, 0.28);
+}
+.form-row {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+}
+.form-field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+label {
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+input,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #333;
+	border-radius: 0;
+	background-color: rgba(255, 255, 255, 0.72);
+	color: #333;
+	font: inherit;
+}
+textarea {
+	resize: vertical;
+}
+input:focus,
+textarea:focus {
+	outline: 3px solid rgba(107, 61, 53, 0.3);
+	outline-offset: 1px;
+}
+input:focus:invalid,
+textarea:focus:invalid {
+	border-color: #8b2f2f;
+}
+button {
+	padding: 12px 20px;
+	border: 2px solid #333;
+	background-color: #6b3d35;
+	color: #fff;
+	font: inherit;
+	font-weight: bold;
+	cursor: pointer;
+}
+button:hover,
+button:focus-visible {
+	background-color: #4f2d28;
+}
+main ul {
+	margin-top: 24px;
+	padding-left: 24px;
+}
+.contact-details {
+	margin-top: 24px;
+	padding: 12px 16px 16px;
+	border: 2px solid #333;
+}
+.contact-details legend {
+	padding: 0 8px;
+	font-weight: bold;
+}
+main a {
+	color: #6b3d35;
+}
+footer {
+	width: 100%;
+	padding: 20px;
+	border: 2px solid #333;
+	background-color: #ddb3b3;
+	text-align: center;
+}
+@media (max-width: 600px) {
+	header {
+		padding: 18px 14px;
+	}
+	nav ul {
+		gap: 16px;
+	}
+	main {
+		padding: 40px 0 56px;
+	}
+	form {
+		padding: 20px;
+	}
+	.form-row {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+}

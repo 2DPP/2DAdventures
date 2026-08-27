@@ -1,0 +1,81 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #c0a193e5;
+}
+header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    background-color: #ddb3b3;
+}
+#GuideName {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Sekuya', sans-serif;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+}
+nav a {
+    color: #333;
+    font-weight: bold;
+}
+main {
+    margin-top:20px;
+    flex: 1;
+    width: min(900px, 90%);
+    text-align: center;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#bio {
+    margin: 10px 0 20px;
+}
+#myPhoto{
+   width: 250px;
+   height: auto;
+   margin:25px;
+   border: 3px solid #333;
+   border-radius: 25px;
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.644);
+   transition: transform 0.3s ease;
+}
+
+#myPhoto:hover{
+   transform: scale(1.1);
+}
+article {
+    margin: 20px auto;
+    line-height: 1.6;
+}
+article p {
+    margin: 12px 0;
+}
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    background-color: #ddb3b3;
+}
