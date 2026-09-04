@@ -1,7 +1,11 @@
 /* Design variables */
 :root {
     --brand-color: #ddb3b3;
+    --brand: #6b3d35;
+    --brand-hover: #4f2d28;
     --dark-ink: #333;
+    --light-ink: #fff;
+    --error-color: #8b2f2f;
     --muted-grey: #3f3f3f;
     --light-background: #c0a193e5;
 }
@@ -100,10 +104,18 @@ article {
     align-items: center;
     text-align: center;
 }
-main > article:not(.place-details) {
+/* Place cards - separates each guide entry for easier scanning. */
+.place-card {
     padding: 20px;
+    margin-bottom: 24px;
     border: 1px solid var(--dark-ink);
+    border-left: 6px solid var(--brand);
+    border-radius: 16px;
     background-color: var(--light-background);
+}
+.place-card .PlaceName {
+    font-size: 1.35rem;
+    color: var(--dark-ink);
 }
 
 /* Place detail content and tables */
@@ -262,10 +274,12 @@ footer {
 .contact-page fieldset {
     padding: 16px;
     border: 1px solid var(--dark-ink);
+    border-radius: 12px;
 }
 .contact-page fieldset legend {
     padding: 0 8px;
     font-weight: bold;
+    color: var(--brand);
 }
 .contact-page .form-row {
     display: grid;
@@ -298,26 +312,26 @@ footer {
 .contact-page input:focus,
 .contact-page select:focus,
 .contact-page textarea:focus {
-    outline: 3px solid rgba(107, 61, 53, 0.3);
-    outline-offset: 1px;
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
 }
 .contact-page input:focus:invalid,
 .contact-page select:focus:invalid,
 .contact-page textarea:focus:invalid {
-    border-color: #8b2f2f;
+    border-color: var(--error-color);
 }
 .contact-page button {
     padding: 12px 20px;
-    border: 2px solid var(--dark-ink);
-    background-color: #6b3d35;
-    color: #fff;
+    border: none;
+    background-color: var(--brand);
+    color: var(--light-ink);
     font: inherit;
     font-weight: bold;
     cursor: pointer;
 }
 .contact-page button:hover,
 .contact-page button:focus-visible {
-    background-color: #4f2d28;
+    background-color: var(--brand-hover);
 }
 .contact-page main ul {
     margin-top: 24px;
@@ -332,7 +346,7 @@ footer {
     margin-bottom: 8px;
 }
 .contact-page main a {
-    color: #6b3d35;
+    color: var(--brand);
 }
 
 /* Responsive contact layout - keeps the form usable on small screens. */
