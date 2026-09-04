@@ -1,23 +1,35 @@
+:root {
+    --brand-color: #ddb3b3;
+    --dark-ink: #333;
+    --muted-grey: #3f3f3f;
+    --light-background: #c0a193e5;
+}
+
 * {
-    margin:0;
-    padding:0;
-   box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    color: var(--dark-ink);
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: #c0a193e5;
+    background-color: var(--light-background);
 }
 header {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    border: 2px solid #333;
-    background-color: #ddb3b3;
+    border: 2px solid var(--dark-ink);
+    background-color: var(--brand-color);
+}
+nav {
+    margin-top: 12px;
 }
 nav ul {
     display: flex;
@@ -26,7 +38,7 @@ nav ul {
     list-style: none;
 }
 nav a {
-    color: #333;
+    color: var(--dark-ink);
     font-weight: bold;
 }
 #myName{
@@ -55,10 +67,11 @@ section{
 }
 main {
     width: 100%;
+    padding: 1px 0;
 }
 #bio {
     font-size: 18px;
-    color: #3f3f3f;
+    color: var(--muted-grey);
     margin-bottom: 20px;
     margin:auto;
 }
@@ -79,6 +92,11 @@ article {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+main > article:not(.place-details) {
+    padding: 20px;
+    border: 1px solid var(--dark-ink);
+    background-color: var(--light-background);
 }
 .place-summary {
     min-height: 160px;
@@ -103,7 +121,7 @@ table {
 th,
 td {
     padding: 12px;
-    border: 1px solid #333;
+    border: 1px solid var(--dark-ink);
     vertical-align: top;
 }
 th {
@@ -112,7 +130,7 @@ th {
 .suggestion-section {
     margin-top: 44px;
     padding-top: 28px;
-    border-top: 2px solid #333;
+    border-top: 2px solid var(--dark-ink);
 }
 .suggestion-section h2 {
     text-align: center;
@@ -137,15 +155,15 @@ th {
 .suggestion-form input[type="email"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #333;
-    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--dark-ink);
+    background-color: var(--light-background);
     font: inherit;
 }
 .suggestion-form fieldset {
     display: grid;
     gap: 12px;
     padding: 16px;
-    border: 1px solid #333;
+    border: 1px solid var(--dark-ink);
 }
 .choice-list {
     display: grid;
@@ -160,9 +178,9 @@ th {
 .suggestion-form button {
     justify-self: start;
     padding: 10px 18px;
-    border: 1px solid #333;
-    background-color: #ddb3b3;
-    color: #333;
+    border: 1px solid var(--dark-ink);
+    background-color: var(--brand-color);
+    color: var(--dark-ink);
     font: inherit;
     font-weight: bold;
     cursor: pointer;
@@ -177,6 +195,6 @@ footer {
     width: 100%;
     padding: 20px;
     text-align: center;
-    border: 2px solid #333;
-    background-color: #ddb3b3;
+    border: 2px solid var(--dark-ink);
+    background-color: var(--brand-color);
 }
