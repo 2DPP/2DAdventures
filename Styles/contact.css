@@ -1,23 +1,28 @@
+/* Reset and base styles */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
+/* Contact page foundation */
 body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #c0a193e5;
-	color: #333;
+	background-color: var(--light-background);
+	color: var(--dark-ink);
 	font-family: 'Playfair Display', serif;
 }
+
+/* Header and navigation */
 header {
 	width: 100%;
 	padding: 20px;
 	text-align: center;
-	border: 2px solid #333;
-	background-color: #ddb3b3;
+	border: 2px solid var(--dark-ink);
+	background-color: var(--brand-color);
 }
 #GuideName {
 	margin-bottom: 20px;
@@ -31,9 +36,11 @@ nav ul {
 	list-style: none;
 }
 nav a {
-	color: #333;
+	color: var(--dark-ink);
 	font-weight: bold;
 }
+
+/* Contact form and details */
 main {
 	width: min(700px, calc(100% - 40px));
 	flex: 1;
@@ -46,12 +53,12 @@ main h2 {
 form {
 	margin: 32px 0;
 	padding: 28px;
-	border: 2px solid #333;
+	border: 2px solid var(--dark-ink);
 	background-color: rgba(255, 255, 255, 0.28);
 }
 fieldset {
 	padding: 16px;
-	border: 1px solid #333;
+	border: 1px solid var(--dark-ink);
 }
 fieldset legend {
 	padding: 0 8px;
@@ -76,10 +83,10 @@ select,
 textarea {
 	width: 100%;
 	padding: 12px;
-	border: 1px solid #333;
+	border: 1px solid var(--dark-ink);
 	border-radius: 0;
 	background-color: rgba(255, 255, 255, 0.72);
-	color: #333;
+	color: var(--dark-ink);
 	font: inherit;
 }
 textarea {
@@ -124,11 +131,13 @@ main ul {
 main a {
 	color: #6b3d35;
 }
+
+/* Contact page footer and responsive layout */
 footer {
 	width: 100%;
 	padding: 20px;
-	border: 2px solid #333;
-	background-color: #ddb3b3;
+	border: 2px solid var(--dark-ink);
+	background-color: var(--brand-color);
 	text-align: center;
 }
 @media (max-width: 600px) {
