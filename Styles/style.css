@@ -38,13 +38,14 @@ header {
     border: 2px solid var(--dark-ink);
     background-color: var(--brand-color);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 12px 24px;
 }
 nav {
-    margin-left: auto;
+    order: 2;
 }
 nav ul {
     display: flex;
@@ -60,7 +61,7 @@ nav a {
     margin: 0;
 }
 header > p {
-    flex-basis: 100%;
+    flex-basis: auto;
     order: 3;
     text-align: center;
 }
@@ -360,20 +361,25 @@ footer {
     color: var(--brand);
 }
 
-/* Responsive contact layout - keeps the form usable on small screens. */
+/* Responsive layout - keeps the header and contact form usable on small screens. */
 @media (max-width: 600px) {
     header {
-        padding: 18px 14px;
-        gap: 8px 12px;
+        padding: 14px 10px;
+        gap: 6px 8px;
     }
     #GuideName {
-        font-size: 22px;
+        font-size: 18px;
     }
     nav ul {
-        gap: 16px;
+        gap: 10px;
     }
     nav a {
+        font-size: 13px;
+    }
+    header > p {
+        flex-basis: auto;
         font-size: 14px;
+        line-height: 1.4;
     }
     .contact-page main {
         padding: 40px 0 56px;
