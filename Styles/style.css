@@ -92,6 +92,11 @@ main {
     width: 100%;
     padding: 1px 0;
 }
+.place-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
 #bio {
     font-size: 18px;
     color: var(--muted-grey);
@@ -118,8 +123,10 @@ article {
 }
 /* Place cards - separates each guide entry for easier scanning. */
 .place-card {
+    flex: 1 1 240px;
+    width: auto;
     padding: 20px;
-    margin-bottom: 24px;
+    margin: 0;
     border: 1px solid var(--dark-ink);
     border-left: 6px solid var(--brand);
     border-radius: 16px;
