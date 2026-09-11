@@ -35,22 +35,34 @@ header {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
     border: 2px solid var(--dark-ink);
     background-color: var(--brand-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 24px;
 }
 nav {
-    margin-top: 12px;
+    margin-left: auto;
 }
 nav ul {
     display: flex;
-    justify-content: center;
     gap: 24px;
     list-style: none;
 }
 nav a {
     color: var(--dark-ink);
     font-weight: bold;
+    white-space: nowrap;
+}
+#GuideName {
+    margin: 0;
+}
+header > p {
+    flex-basis: 100%;
+    order: 3;
+    text-align: center;
 }
 #myName{
     margin-top: 20px;
@@ -60,7 +72,6 @@ nav a {
     font-size: 30px;
     font-weight: bold;
     color: var(--dark-ink);
-    margin-bottom: 20px;
     font-family: 'Sekuya', sans-serif;
 }
 
@@ -351,11 +362,18 @@ footer {
 
 /* Responsive contact layout - keeps the form usable on small screens. */
 @media (max-width: 600px) {
-    .contact-page header {
+    header {
         padding: 18px 14px;
+        gap: 8px 12px;
     }
-    .contact-page nav ul {
+    #GuideName {
+        font-size: 22px;
+    }
+    nav ul {
         gap: 16px;
+    }
+    nav a {
+        font-size: 14px;
     }
     .contact-page main {
         padding: 40px 0 56px;
