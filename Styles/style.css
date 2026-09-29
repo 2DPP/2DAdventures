@@ -28,8 +28,9 @@ body {
     grid-template-areas:
         "masthead"
         "main"
+        "side"
         "foot";
-    gap: 16px;
+    gap: 10px;
     background-color: var(--light-background);
 }
 
@@ -38,7 +39,7 @@ header {
     grid-area: masthead;
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 14px 10px;
     border: 2px solid var(--dark-ink);
     background-color: var(--brand-color);
     display: flex;
@@ -46,7 +47,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px 24px;
+    gap: 6px 8px;
 }
 aside {
     position: fixed;
@@ -104,7 +105,7 @@ nav {
 }
 nav ul {
     display: flex;
-    gap: 24px;
+    gap: 10px;
     list-style: none;
 }
 nav a {
@@ -119,13 +120,15 @@ header > p {
     flex-basis: auto;
     order: 3;
     text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
 }
 #myName{
     margin-top: 20px;
 }
 
 #GuideName {
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
     color: var(--dark-ink);
     font-family: 'Sekuya', sans-serif;
@@ -344,7 +347,7 @@ footer {
 .contact-page main {
     width: min(700px, calc(100% - 40px));
     flex: 1;
-    padding: 60px 0 72px;
+    padding: 40px 0 56px;
     line-height: 1.6;
 }
 .contact-page main h2 {
@@ -352,7 +355,7 @@ footer {
 }
 .contact-page form {
     margin: 32px 0;
-    padding: 28px;
+    padding: 20px;
     border: 2px solid var(--dark-ink);
     background-color: rgba(255, 255, 255, 0.28);
 }
@@ -368,7 +371,7 @@ footer {
 }
 .contact-page .form-row {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 .contact-page .form-field {
@@ -434,42 +437,42 @@ footer {
     color: var(--brand);
 }
 
-/* Responsive layout - keeps the header and contact form usable on small screens. */
-@media (max-width: 600px) {
+/* Larger screens restore the two-column guide skeleton and roomier controls. */
+@media (min-width: 700px) {
     body {
-        grid-template-columns: 1fr;
+        grid-template-columns: 220px 1fr;
         grid-template-areas:
-            "masthead"
-            "main"
-            "foot";
-        gap: 10px;
+            "masthead masthead"
+            "side main"
+            "foot foot";
+        gap: 16px;
     }
     header {
-        padding: 14px 10px;
-        gap: 6px 8px;
+        padding: 20px;
+        gap: 12px 24px;
     }
     #GuideName {
-        font-size: 18px;
+        font-size: 30px;
     }
     nav ul {
-        gap: 10px;
+        gap: 24px;
     }
     nav a {
-        font-size: 13px;
+        font-size: inherit;
     }
     header > p {
         flex-basis: auto;
-        font-size: 14px;
-        line-height: 1.4;
+        font-size: inherit;
+        line-height: inherit;
     }
     .contact-page main {
-        padding: 40px 0 56px;
+        padding: 60px 0 72px;
     }
     .contact-page form {
-        padding: 20px;
+        padding: 28px;
     }
     .contact-page .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
     }
 }
