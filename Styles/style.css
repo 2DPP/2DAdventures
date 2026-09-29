@@ -156,9 +156,8 @@ main {
     padding: 1px 0;
 }
 .place-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
     width: min(1200px, calc(100% - 40px));
     margin: 24px auto 40px;
