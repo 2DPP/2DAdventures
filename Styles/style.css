@@ -31,9 +31,8 @@ body {
     grid-template-areas:
         "masthead"
         "main"
-        "side"
         "foot";
-    grid-template-rows: auto auto auto minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
     gap: 10px;
     background-color: var(--light-background);
 }
@@ -318,7 +317,7 @@ footer {
 
 /* About page additions - sizes and spaces its profile content. */
 .about-page main {
-    margin-top: 20px;
+    margin: 20px auto 0;
     flex: 1;
     width: min(900px, 90%);
     text-align: center;
@@ -339,6 +338,7 @@ footer {
     transform: scale(1.1);
 }
 .about-page article {
+    min-height: 0;
     margin: 20px auto;
     line-height: 1.6;
 }
@@ -346,13 +346,14 @@ footer {
     margin: 12px 0;
 }
 .about-page footer {
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 /* Contact page additions - styles its message form and contact details. */
 .contact-page main {
     width: min(700px, calc(100% - 40px));
     flex: 1;
+    margin: 0 auto;
     padding: 40px 0 56px;
     line-height: 1.6;
 }
@@ -446,11 +447,11 @@ footer {
 /* Larger screens restore the two-column guide skeleton and roomier controls. */
 @media (min-width: 700px) {
     body {
-        grid-template-columns: 220px 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "masthead masthead"
-            "side main"
-            "foot foot";
+            "masthead"
+            "main"
+            "foot";
         grid-template-rows: auto minmax(0, 1fr) auto;
         gap: 16px;
     }
