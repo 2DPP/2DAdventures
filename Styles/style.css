@@ -18,6 +18,9 @@
 }
 
 /* Page foundation */
+html {
+    min-height: 100%;
+}
 body {
     font-family: 'Playfair Display', serif;
     line-height: 1.6;
@@ -30,6 +33,7 @@ body {
         "main"
         "side"
         "foot";
+    grid-template-rows: auto auto auto minmax(0, 1fr);
     gap: 10px;
     background-color: var(--light-background);
 }
@@ -155,6 +159,7 @@ main {
 .place-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     width: min(1200px, calc(100% - 40px));
     margin: 24px auto 40px;
@@ -303,6 +308,7 @@ th {
 
 footer {
     grid-area: foot;
+    align-self: end;
     width: 100%;
     padding: 20px;
     text-align: center;
@@ -445,6 +451,7 @@ footer {
             "masthead masthead"
             "side main"
             "foot foot";
+        grid-template-rows: auto minmax(0, 1fr) auto;
         gap: 16px;
     }
     header {
