@@ -1,12 +1,12 @@
 /* Design variables */
 :root {
     --brand-color: #ddb3b3;
-    --brand: #6b3d35;
+    --brand: #5a302a;
     --brand-hover: #4f2d28;
-    --dark-ink: #333;
+    --dark-ink: #262626;
     --light-ink: #fff;
     --error-color: #8b2f2f;
-    --muted-grey: #3f3f3f;
+    --muted-grey: #333;
     --light-background: #c0a193e5;
 }
 
@@ -23,7 +23,7 @@ html {
 }
 body {
     font-family: 'Playfair Display', serif;
-    line-height: 1.6;
+    line-height: 1.7;
     min-height: 100vh;
     color: var(--dark-ink);
     display: grid;
@@ -115,6 +115,7 @@ nav a {
     color: var(--dark-ink);
     font-weight: bold;
     white-space: nowrap;
+    text-underline-offset: 3px;
 }
 #GuideName {
     margin: 0;
@@ -154,6 +155,30 @@ main {
     flex: 1;
     width: 100%;
     padding: 1px 0;
+}
+.place-count {
+    text-align: center;
+    font-weight: 700;
+}
+.guide-decisions {
+    width: 100%;
+    margin: 20px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--dark-ink);
+    text-align: left;
+}
+.guide-decisions h2 {
+    margin-bottom: 8px;
+}
+.guide-decisions h4 {
+    margin-bottom: 8px;
+}
+.guide-decisions p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+.decision-label {
+    font-weight: 700;
 }
 .place-grid {
     display: grid;
@@ -203,6 +228,12 @@ article {
     font-size: 1.35rem;
     color: var(--dark-ink);
 }
+.place-card p {
+    line-height: 1.65;
+}
+.place-card .recommendation {
+    color: var(--muted-grey);
+}
 .place-card .place-image {
     width: 100%;
     margin: 20px 0 0;
@@ -211,6 +242,9 @@ article {
 /* Place detail content and tables */
 .place-summary {
     min-height: 160px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 .place-details {
     text-align: left;
@@ -441,6 +475,8 @@ footer {
 }
 .contact-page main a {
     color: var(--brand);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
 }
 
 /* Larger screens restore the two-column guide skeleton and roomier controls. */
